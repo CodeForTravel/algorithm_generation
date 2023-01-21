@@ -2,10 +2,10 @@
 
 ### Project setup
 
-- Clone the repository: https://github.com/CodeForTravel/test_assesment.git
+- Clone the repository: https://github.com/CodeForTravel/algorithm_generation.git
 
   ```bash
-  git clone https://github.com/CodeForTravel/test_assesment.git
+  git clone https://github.com/CodeForTravel/algorithm_generation.git
   ```
 
 - Create a **.env** file inside the project directory and copy from **env_example** to **.env** and set the environment variables according to the needs.
@@ -18,16 +18,6 @@
   DB_USER=postgres
   DB_PASSWORD=admin1234
   DB_PORT=5432
-  WEATHER_API_URL=https://api.openweathermap.org/data/2.5/weather
-  WEATHER_API_KEY=49611bbd929ed98af4fcfb28gfdf48f8d32
-  LONGITUDE=90
-  LATITUDE=24
-  ```
-
-- Create an account in **https://openweathermap.org/** get the API_KEY and set is to .env file:
-
-  ```bash
-  WEATHER_API_KEY=your_weather_api_key
   ```
 
 - Create a virtual environment named **env** with Python's **venv**:
@@ -51,12 +41,6 @@
   pip install -r requirements.txt
   ```
 
-- Install redis server, if dont'n have in your machine yet. It will need for django-huey
-
-  ```bash
-  sudo apt-get install redis-server
-  ```
-
 - Run **migrate** command to propagate the migrations files into the db
 
   ```bash
@@ -72,17 +56,8 @@
 - Run Django server
 
   ```bash
-  python manage.py runserver ip_address:port
+  python manage.py runserver
   ```
-
-- Run Django huey server: It will run the tasks scheduler
-
-  ```bash
-  python manage.py run_huey
-  ```
-
-- fetch the current weather:
-  Note: This system will fetch the current weather after every 10 minutes, and it will store the current weather data to constance. So that we can use this data to recommand product to user based on current weather.
 
 - Project APIs: Postman api collections link, here you will find the APIs created for this project
 
