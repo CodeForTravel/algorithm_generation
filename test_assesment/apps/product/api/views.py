@@ -12,17 +12,7 @@ class ProductViewSet(viewsets.ModelViewSet):
     queryset = models_product.Product.objects.all()
     serializer_class = serializers_product.ProductSerializer
     pagination_class = pagination_global.GlobalPagination
-    
-
-    def get_permissions(self):
-        """
-        Instantiates and returns the list of permissions that this view requires.
-        """
-        if self.action in ["retrieve", "list"]:
-            permission_classes = [IsAuthenticated]
-        else:
-            permission_classes = [IsAuthenticated & permissions_user.StaffOnly or permissions_user.AdminOnly]
-        return [permission() for permission in permission_classes]
+    permission_classes = [IsAuthenticated]
 
  
         

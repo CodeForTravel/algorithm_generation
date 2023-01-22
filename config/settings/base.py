@@ -84,8 +84,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'test_assesment.apps.user.middleware.TokenValidationMiddleware',
-
+    'test_assesment.apps.user.middleware.CustomTokenValidationMiddleware',
 ]
 
 ROOT_URLCONF = 'test_assesment.urls'

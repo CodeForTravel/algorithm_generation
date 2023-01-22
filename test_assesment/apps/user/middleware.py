@@ -3,7 +3,7 @@ from django.http import JsonResponse
 from django.urls import resolve
 
 
-class TokenValidationMiddleware:
+class CustomTokenValidationMiddleware:
     def __init__(self, get_response):
         self.get_response = get_response
         self.whitelist = ["login", "register", "forget-password", "reset-password"]

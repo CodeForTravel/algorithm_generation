@@ -6,6 +6,7 @@ from test_assesment.apps.user.api import views as user_views
 
 router = routers.DefaultRouter()
 router.register(r'users', user_views.UserViewSet, basename="users")
+router.register(r'custom-permissions', user_views.CustomPermissionViewSet, basename="custom-permission")
 
 urlpatterns = [
     path("", include(router.urls)),
@@ -14,3 +15,4 @@ urlpatterns = [
     path('forget-password/', ForgotPasswordView.as_view(), name='forget-password'),
     path('reset-password/', ResetPasswordView.as_view(), name='reset-password'),
 ]
+

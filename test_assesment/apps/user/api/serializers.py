@@ -20,7 +20,7 @@ class UserRegisterSerializer(serializers.ModelSerializer):
     password1 = serializers.CharField(min_length=8, write_only=True)
     class Meta:
         model = User
-        fields = ['email', 'first_name', 'last_name', "password", "password1"]
+        fields = ['email', 'first_name', 'last_name', "password", "password1", "user_type"]
 
     def validate(self, attrs):
         password1 = attrs.pop('password1', None)
