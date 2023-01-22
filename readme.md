@@ -59,12 +59,6 @@
   python manage.py runserver
   ```
 
-- Project APIs: Postman api collections link, here you will find the APIs created for this project
-
-```bash
-  https://www.postman.com/collections/49feeffba81a96b99c92
-```
-
 ### Makefile
 
 - Delete `.pyc` files with the command:
